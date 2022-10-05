@@ -1,1 +1,0 @@
-console.log("Comando Echo");
