@@ -15,7 +15,7 @@ rl.question("cp ", function (entrada:string) {
     let rutas:string[] = entrada.split(" ",2)
 
     console.info(rutas)
-    fs.copyFile(rutas[0],"."+rutas[1]+"/copia-"+rutas[0],COPYFILE_EXCL,(err:any)=>{
+    fs.copyFile(rutas[0],rutas[1],COPYFILE_EXCL,(err:any)=>{
         if (err) throw ("¡Entrada Invalida!\n"+err);
         console.log("Archivo copiado...1")
 
