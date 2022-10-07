@@ -12,7 +12,7 @@ var rl = readline.createInterface({
 rl.question("cp ", function (entrada) {
     var rutas = entrada.split(" ", 2);
     console.info(rutas);
-    fs.copyFile("./" + rutas[0], "." + rutas[1] + "/copia-" + rutas[0], COPYFILE_EXCL, function (err) {
+    fs.copyFile(rutas[0], "." + rutas[1] + "/copia-" + rutas[0], COPYFILE_EXCL, function (err) {
         if (err)
             throw ("¡Entrada Invalida!\n" + err);
         console.log("Archivo copiado...1");
